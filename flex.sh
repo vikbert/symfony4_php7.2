@@ -3,6 +3,7 @@
 case "$1" in
   up)
     docker-compose up -d
+    docker exec -it flex_webapp demo/bin/init_demo
   ;;
   cleanall)
     docker-compose stop
