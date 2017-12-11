@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+cd /var/www/application/demo
 composer install
 bin/console doctrine:database:create
 bin/console doctrine:schema:update --force
