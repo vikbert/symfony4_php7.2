@@ -1,8 +1,13 @@
 # symfony4_php7.2
 
-This is the symfony 4 `flex` quick demo based on [the article](http://fabien.potencier.org/symfony4-demo.html).
+This is the symfony 4 `flex` quick demo based on [this article](http://fabien.potencier.org/symfony4-demo.html) posted
+on the official symfony blog. To make the test simple as possible, the docker enviroment is used for the test.
+Be sure, the software package `docker` and `docker-compose` are already installed.
 
-The project starts two docker containers:
+- [install docker engine](https://docs.docker.com/engine/installation/)
+- [install dockr-compose](https://docs.docker.com/compose/install/)
+
+The project starts two docker containers to test the symfony 4:
 
 - flex_webapp: nginx + php7.2-fpm
 - flex_db: MySQL server latest
