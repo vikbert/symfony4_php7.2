@@ -8,7 +8,7 @@ case "$1" in
   cleanall)
     docker-compose stop
     docker rm -f flex_webapp flex_db
-    docker rmi -f flex_webapp flex_db
+    docker rmi -f symfony4php72_webapp
     docker ps && docker images | grep flex
   ;;
   clean)
