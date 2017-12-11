@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+     image: mysql
+     container_name: flex_db
+     restart: always
+     ports:
+       - 6603:3306
+     environment:
+       MYSQL_ROOT_PASSWORD: root
+       MYSQL_USER: root
+       MYSQL_PASSWORD: root
+  webapp:
+    container_name: flex_webapp
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/var/www
+    ports:
+      - "8000:80"
+      - "8080:8080"
+      - "443:443"
+    links:
+      - db
